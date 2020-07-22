@@ -1,0 +1,31 @@
+[
+    {
+    "url": "https://www.younited-credit.com/",
+    "mail": "dpunk@hotmail.com",
+    "statut": "SINGLE", 
+    "nbreEnfants" : "0", 
+    "statutLogement" : "TENANT", 
+    "moisLogement" : "01",
+    "anneeLogement" : "2020", 
+    "secteurActivite" : "INDEPENDENT", 
+    "metier" : "AUTO_ENTREPRENEUR", 
+    "metierDebutMois" : "02", 
+    "metierDebutAnnee" : "2019", 
+    "revenutNet" : "2000", 
+    "housingAssistance" : "0", 
+    "additionalIncome" : "0", 
+    "rentAmount" : "500",
+    "loanCount" : "1",
+    "type" : "PERSONAL_LOAN",  
+    "loanAmount" : "20", 
+    "bankCode" : "HSBC", 
+    "bankFromYear" : "2010",
+    "gender" : "#GENDERCODE_M",
+    "lastName": "Bangalter" ,
+    "firstName": "Thomas", 
+    "dateOfBirthDay": "21", 
+    "dateOfBirthMonth": "11", 
+    "postalCode": "19000"
+    }
+ 
+]
