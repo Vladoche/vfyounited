@@ -1,0 +1,24 @@
+{
+  "name": "vfyounited",
+  "version": "1.0.0",
+  "description": "Projet d'automatisation Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vladoche/vfyounited.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vladoche/vfyounited/issues"
+  },
+  "homepage": "https://github.com/Vladoche/vfyounited#readme",
+  "dependencies": {
+    "cypress": "^4.11.0"
+  }
+}
