@@ -1,5 +1,4 @@
-[
-    {
+{
     "url": "https://www.younited-credit.com/",
     "projet": "RELOCATION",
     "montantPrêt": "3K5",
@@ -14,20 +13,24 @@
     "metier" : "AUTO_ENTREPRENEUR", 
     "metierDebutMois" : "02", 
     "metierDebutAnnee" : "2017", 
-    "revenutNet" : "2110", 
-    "aide" : "0", 
-    "revenuComplementaire" : "0",
-    "emprunt" : "1",
-    "type" : "",  
+    "revenuNet" : "2110", 
+    "housingAssistance" : "0", 
+    "additionalIncome" : "10",
+    "emprunt" : "3000",
+    "loanCount" : "0",  
     "montant" : "20", 
-    "codeBanque" : "", 
+    "bank" : "CREDIT_LYONNAIS", 
     "bankFromYear" : "2000",
     "gender" : "",
-    "nom": "Bangalter" ,
-    "prenom": "Thomas", 
-    "jourNaissance": "21", 
-    "moisNaissance": "11", 
-    "codePostal": "19000"
-    }
- 
-]
+    "lastName": "Bangalter" ,
+    "firstName": "Thomas", 
+    "dayBirth": "21", 
+    "monthBirth": "11",
+    "yearBirth": "1971", 
+    "postalCode": "19000",
+    "city": "TULLE",
+    "cellPhoneNumber": "0610839701",
+    "adress": "14 place Together",
+    "countryZone": "FR"
+    
+}
