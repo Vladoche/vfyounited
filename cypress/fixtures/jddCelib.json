@@ -1,27 +1,45 @@
-{
+{   
+    "___ETAPE 1": "SELECTION DU PROJET",
     "url": "https://www.younited-credit.com/",
-    "projet": "RELOCATION",
-    "montantPrêt": "3K5",
-    "maturitéCrédit": "M24",
+    "projectSelect": "RELOCATION",
+    "amount": "3K5",
+    "creditMaturity": "M24",
+
+    "___ETAPE 2" : "RENSEIGNEMENT DU MAIL",
     "mail": "dpunk@hotmail.com",
-    "statut": "SINGLE", 
-    "nbreEnfants" : "0", 
-    "statutLogement" : "TENANT", 
-    "moisLogement" : "01",
-    "anneeLogement" : "2014", 
-    "secteurActivite" : "INDEPENDENT", 
-    "metier" : "AUTO_ENTREPRENEUR", 
-    "metierDebutMois" : "02", 
-    "metierDebutAnnee" : "2017", 
+
+    "___ETAPE 3" : "RENSEIGNEMENT DE LA SITUATION FAMILIALE",
+    "maritalStatus": "SINGLE", 
+    "childNumberPropal" : "0",
+
+    "___ETAPE 4" : "RENSEIGNEMENT DU LOGEMENT",
+    "housingStatus" : "TENANT", 
+    "housingStatusFromMonth" : "01",
+    "housingStatusFromYear" : "2014",
+
+    "___ETAPE 5" : "RENSEIGNEMENT DE LA SITUATION PROFESSIONNELLE",
+    "activitySector" : "INDEPENDENT", 
+    "profession" : "AUTO_ENTREPRENEUR", 
+    "businessActivityStartDateMonth" : "02", 
+    "businessActivityStartDateYear" : "2017",
+
+    "___ETAPE 6" : "RENSEIGNEMENT DES REVENUS MENSUELS",
     "revenuNet" : "2110", 
     "housingAssistance" : "0", 
     "additionalIncome" : "10",
+
+    "___ETAPE 7" : "RENSEIGNEMENT DES CHARGES MENSUELLES",
     "emprunt" : "3000",
-    "loanCount" : "0",  
-    "montant" : "20", 
+    "loanCount" : "1",
+    "creditOne" : "PERSONAL_LOAN", 
+    "loanAmount" : "3000",
+
+    "___ETAPE 8" : "RENSEIGNEMENT DE LA BANQUE",
     "bank" : "CREDIT_LYONNAIS", 
     "bankFromYear" : "2000",
-    "gender" : "",
+
+    "___ETAPE 9" : "DETAILS IDENTITE",
+    "gender" : "#GENDERCODE_M",
     "lastName": "Bangalter" ,
     "firstName": "Thomas", 
     "dayBirth": "21", 
@@ -29,6 +47,8 @@
     "yearBirth": "1971", 
     "postalCode": "19000",
     "city": "TULLE",
+
+    "___ETAPE 10" : "PAGE CONTACT",
     "cellPhoneNumber": "0610839701",
     "adress": "14 place Together",
     "countryZone": "FR"

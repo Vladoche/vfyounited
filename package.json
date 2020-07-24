@@ -4,8 +4,9 @@
   "description": "Projet d'automatisation Cypress",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run --browser chrome"
+    "cy:run": "rimraf mochawesome-report cypress/results mochawesome.json && cypress run",
+    "generateReport": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge mochawesome.json",
+    "cy:run:report" : "npm run cy:run && npm run generateReport"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/Vladoche/vfyounited#readme",
   "dependencies": {
-    "cypress": "^4.11.0"
+    "cypress": "^4.11.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
   }
 }

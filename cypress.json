@@ -1,3 +1,10 @@
 {
-  "projectId": "11xv5s"
+  "projectId": "11xv5s",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
 }

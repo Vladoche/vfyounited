@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-24T11:48:07.503Z",
+    "end": "2020-07-24T11:48:25.635Z",
+    "duration": 18132,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "227aa843-6d82-4838-b765-7e34c5b9d8aa",
+      "title": "",
+      "fullFile": "cypress\\integration\\Profils\\Celibataire.spec.js",
+      "file": "cypress\\integration\\Profils\\Celibataire.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a93407aa-592c-4d0d-970a-e082be8bd130",
+          "title": "Parcours du célibataire",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Etape 1 : Sélection du projet",
+              "fullTitle": "Parcours du célibataire Etape 1 : Sélection du projet",
+              "timedOut": null,
+              "duration": 13227,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectionProjet(jddCelib.projectSelect, jddCelib.amount, jddCelib.creditMaturity);\ncy.get('[data-di-id=di-id-bca9a80c-4fc29f73]').click();\ncy.url().should('include', '/email');\ncy.get(\"h2\").should('contain', 'Découvrez votre offre de prêt de');",
+              "err": {},
+              "uuid": "2b0ef238-c10f-4ec6-b3e9-f313454a1af0",
+              "parentUUID": "a93407aa-592c-4d0d-970a-e082be8bd130",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Etape 2 : Renseignement du mail",
+              "fullTitle": "Parcours du célibataire Etape 2 : Renseignement du mail",
+              "timedOut": null,
+              "duration": 2821,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.renseignementMail(jddCelib.mail);\ncy.wait(2000);\ncy.get('[data-di-id=\"di-id-8c30ab93-a687b9f3\"]').click();\ncy.url().should('include', '/familysituation');\ncy.get(\"h2\").should('contain', 'Votre situation familiale');",
+              "err": {},
+              "uuid": "a79fcb5a-18c8-4abf-a393-98896eac8aae",
+              "parentUUID": "a93407aa-592c-4d0d-970a-e082be8bd130",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b0ef238-c10f-4ec6-b3e9-f313454a1af0",
+            "a79fcb5a-18c8-4abf-a393-98896eac8aae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16048,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
