@@ -8,33 +8,33 @@
     "___ETAPE 2" : "RENSEIGNEMENT DU MAIL",
     "mail": "dpunk@hotmail.com",
 
-    "___ETAPE 3" : "RENSEIGNEMENT DE LA SITUATION FAMILIALE",
+    "___ETAPE 3" : "SITUATION FAMILIALE",
     "maritalStatus": "SINGLE", 
     "childNumberPropal" : "0",
 
-    "___ETAPE 4" : "RENSEIGNEMENT DU LOGEMENT",
+    "___ETAPE 4" : "LOGEMENT",
     "housingStatus" : "TENANT", 
     "housingStatusFromMonth" : "01",
     "housingStatusFromYear" : "2014",
 
-    "___ETAPE 5" : "RENSEIGNEMENT DE LA SITUATION PROFESSIONNELLE",
+    "___ETAPE 5" : "SITUATION PROFESSIONNELLE",
     "activitySector" : "INDEPENDENT", 
     "profession" : "AUTO_ENTREPRENEUR", 
     "businessActivityStartDateMonth" : "02", 
     "businessActivityStartDateYear" : "2017",
 
-    "___ETAPE 6" : "RENSEIGNEMENT DES REVENUS MENSUELS",
-    "revenuNet" : "2110", 
+    "___ETAPE 6" : "REVENUS MENSUELS",
+    "mainIncome" : "2110", 
     "housingAssistance" : "0", 
     "additionalIncome" : "10",
 
-    "___ETAPE 7" : "RENSEIGNEMENT DES CHARGES MENSUELLES",
-    "emprunt" : "3000",
+    "___ETAPE 7" : "CHARGES MENSUELLES",
+    "rentAmount" : "3000",
     "loanCount" : "1",
     "creditOne" : "PERSONAL_LOAN", 
     "loanAmount" : "3000",
 
-    "___ETAPE 8" : "RENSEIGNEMENT DE LA BANQUE",
+    "___ETAPE 8" : "BANQUE",
     "bank" : "CREDIT_LYONNAIS", 
     "bankFromYear" : "2000",
 

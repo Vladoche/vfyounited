@@ -1,10 +1,13 @@
-/*    _____                                          _           
+/* 
+
+   _____                                          _           
   / ____|                                        | |          
  | |     ___  _ __ ___  _ __ ___   __ _ _ __   __| | ___  ___ 
  | |    / _ \| '_ ` _ \| '_ ` _ \ / _` | '_ \ / _` |/ _ \/ __|
  | |___| (_) | | | | | | | | | | | (_| | | | | (_| |  __/\__ \
   \_____\___/|_| |_| |_|_| |_| |_|\__,_|_| |_|\__,_|\___||___/
- LISTE DES COMMANDES DU PROJET                                                             */
+
+                LISTE DES COMMANDES DU PROJET                                                             */
 
 //ETAPE 1
 Cypress.Commands.add('selectionProjet', (projectSelect, amount, creditMaturity) => {
@@ -34,15 +37,54 @@ Cypress.Commands.add("activity", (activitySector, profession, businessActivitySt
     cy.get('#activitySector-input').select(activitySector).should('contain', 'Indépendants')
     cy.wait(1000)
     cy.get('#profession-input').select(profession).should('have.value', profession)
-    cy.get('#businessActivityStartDate-input-month').type(businessActivityStartDateMonth).should('have.value', businessActivityStartDateMonth)
-    cy.get('#businessActivityStartDate-input-year').type(businessActivityStartDateYear).should('have.value', businessActivityStartDateYear) })
+    cy.get('#businessActivityStartDate-input-month').type(businessActivityStartDateMonth).should('have.class', 'ng-valid')
+    cy.get('#businessActivityStartDate-input-year').type(businessActivityStartDateYear).should('have.class', 'ng-valid') })
+
+////ETAPE 5 MARIE
+Cypress.Commands.add("activityMarried", (activitySector, profession, contractType, employedFrominputmonth, employedFrominputyear ) => {
+    cy.get('#activitySector-input').select(activitySector).should('contain', 'Indépendants')
+    cy.wait(1000)
+    cy.get('#profession-input').select(profession).should('have.class', 'ng-valid')
+    cy.get('#contractType-input').select(contractType).should('have.class', 'ng-valid')
+    cy.get('#employedFrom-input-month').type(employedFrominputmonth,).should('have.class', 'ng-valid')
+    cy.get('#employedFrom-input-year').type(employedFrominputyear).should('have.class', 'ng-valid') })
 
 //ETAPE 6
+Cypress.Commands.add("revenusMensuels", (mainIncome, housingAssistance, additionalIncome) => {
+    cy.get('#mainIncome-input').type(mainIncome).should('have.class', 'ng-valid')
+    //cy.wait(1000)
+    cy.get('#housingAssistance-input').type(housingAssistance).should('have.class', 'ng-valid')
+    cy.get('#additionalIncome-input').type(additionalIncome).should('have.class', 'ng-valid') })
 
 //ETAPE 7
+Cypress.Commands.add("chargesMensuelles", (rentAmount, loanCount, creditOne, loanAmount) => {
+    cy.get('#rentAmount-input').type(rentAmount).should('have.class', 'ng-valid')
+    //cy.wait(1000)
+    cy.get('#loanCount-input').select(loanCount).should('have.class', 'ng-valid')
+    cy.get('#type-input').select(creditOne).should('have.class', 'ng-valid')
+    cy.get('#loanAmount-input').type(loanAmount).should('have.class', 'ng-valid') })
 
 //ETAPE 8
-
+Cypress.Commands.add("banque", (bank, bankFromYear) => {
+    cy.get('#bankCode-input').select(bank).should('have.class', 'ng-valid')
+    cy.wait(1000)
+    cy.get('#bankFrom-input-year').type(bankFromYear).should('have.class','ng-valid') })
+    
 //ETAPE 9
+Cypress.Commands.add("identite", (gender, lastName, firstName, dayBirth, monthBirth, yearBirth, postalCode, city) => {
+    cy.get('[data-di-id="di-id-bf89a9dc-e017ffb1"] > label').click()
+    cy.get('#lastName-input').type(lastName).should('have.class', 'ng-valid')
+    cy.get('#firstName-input').type(firstName).should('have.class', 'ng-valid')
+    cy.get('#dateOfBirth-input-day').type(dayBirth).should('have.class', 'ng-valid')
+    cy.get('#dateOfBirth-input-month').type(monthBirth).should('have.class', 'ng-valid')
+    cy.get('#dateOfBirth-input-year').type(yearBirth).should('have.class', 'ng-valid')
+    cy.get('#postalCode-input').type(postalCode).should('have.class', 'ng-valid')
+    cy.get('#city-input').select(city).should('have.class', 'ng-valid') })
 
 //ETAPE 10
+Cypress.Commands.add("contact", (cellPhoneNumber, adress, postalCode, city, countryZone) => {
+    cy.get('#cellPhoneNumber-input').type(cellPhoneNumber).should('have.class', 'ng-valid')
+    cy.get('#address-input').type(adress).should('have.class', 'ng-valid')
+    cy.get('#postalCode-input').type(postalCode).should('have.class', 'ng-valid')
+    cy.get('#city-input').select(city).should('have.class', 'ng-valid')
+    cy.get('#countryZone-input').select(countryZone).should('have.value', 'FR') })

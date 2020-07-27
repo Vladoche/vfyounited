@@ -74,56 +74,41 @@ describe('Parcours du célibataire', () => {
         cy.url().should('include', '/incomes')
         cy.get("h2").should('contain', 'Vos revenus mensuels')
     })
-
+//COMMANDE FAITE
     it('ETAPE 6 : Renseignement des revenus mensuels',() => {                 
-        cy.get('#mainIncome-input').type(jddCelib.revenuNet).should('have.value', jddCelib.revenuNet)
-        cy.wait(1000)
-        cy.get('#housingAssistance-input').type(jddCelib.housingAssistance).should('have.value',jddCelib.housingAssistance)
-        cy.get('#additionalIncome-input').type(jddCelib.additionalIncome).should('have.value', jddCelib.additionalIncome)
+        cy.revenusMensuels(jddCelib.mainIncome, jddCelib.housingAssistance, jddCelib.additionalIncome)
         cy.get('[data-test=navigator-compact-forward]').click()
         cy.url().should('include', '/outcomes')
         cy.get("h2").should('contain', 'Vos charges mensuelles')
     })
 
+//COMMANDE FAITE
     it('ETAPE 7 : Renseignement des charges mensuelles',() => {                 
-        cy.get('#rentAmount-input').type(jddCelib.emprunt).should('have.value', jddCelib.emprunt)
-        cy.wait(1000)
-        cy.get('#loanCount-input').select(jddCelib.loanCount).should('have.value',jddCelib.loanCount)
-        cy.get('#type-input').select(jddCelib.creditOne).should('have.class', 'ng-valid')
-        cy.get('#loanAmount-input').type(jddCelib.loanAmount).should('have.value', jddCelib.loanAmount)
+        cy.chargesMensuelles(jddCelib.rentAmount, jddCelib.loanCount, jddCelib.creditOne, jddCelib.loanAmount)
         cy.get('[data-test=navigator-compact-forward]').click()
         cy.url().should('include', '/bank')
         cy.get("h2").should('contain', 'Votre banque')
     })
 
+//COMMANDE FAITE
     it('ETAPE 8 : Renseignement de la banque',() => {                 
-        cy.get('#bankCode-input').select(jddCelib.bank).should('have.value', jddCelib.bank)
-        cy.wait(1000)
-        cy.get('#bankFrom-input-year').type(jddCelib.bankFromYear).should('have.value',jddCelib.bankFromYear)
+        cy.banque(jddCelib.bank, jddCelib.bankFromYear)
         cy.get('[data-test=navigator-compact-forward]').click()
         cy.url().should('include', '/identity')
         cy.get("h2").should('contain', 'Vos informations')
     })
 
+//COMMANDE FAITE
     it('ETAPE 9 : Détails identité',() => {                 
-        cy.get('[data-di-id="di-id-bf89a9dc-e017ffb1"] > label').click()
-        cy.get('#lastName-input').type(jddCelib.lastName).should('have.value',jddCelib.lastName)
-        cy.get('#firstName-input').type(jddCelib.firstName).should('have.value',jddCelib.firstName)
-        cy.get('#dateOfBirth-input-day').type(jddCelib.dayBirth).should('have.value',jddCelib.dayBirth)
-        cy.get('#dateOfBirth-input-month').type(jddCelib.monthBirth).should('have.value',jddCelib.monthBirth)
-        cy.get('#dateOfBirth-input-year').type(jddCelib.yearBirth).should('have.value',jddCelib.yearBirth)
-        cy.get('#postalCode-input').type(jddCelib.postalCode).should('have.value',jddCelib.postalCode)
-        cy.get('#city-input').select(jddCelib.city).should('have.class', 'ng-valid')
+        cy.identite(jddCelib.gender, jddCelib.lastName, jddCelib.firstName, jddCelib.dayBirth, jddCelib.monthBirth, jddCelib.yearBirth, jddCelib.postalCode, jddCelib.city)
         cy.get('[data-test=navigator-compact-forward]').click()
         cy.url().should('include', '/contact')
         cy.get("h2").should('contain', 'Vos coordonnées')
     })
-    it('ETAPE 10 : Page Contact',() => {                 
-        cy.get('#cellPhoneNumber-input').type(jddCelib.cellPhoneNumber).should('have.value',jddCelib.cellPhoneNumber)
-        cy.get('#address-input').type(jddCelib.firstName).should('have.value',jddCelib.firstName)
-        cy.get('#postalCode-input').type(jddCelib.postalCode).should('have.value',jddCelib.postalCode)
-        cy.get('#city-input').select(jddCelib.city).should('have.value', '1927219000')
-        cy.get('#countryZone-input').select(jddCelib.countryZone).should('have.value', 'FR')
+
+//COMMANDE FAITE
+    it('ETAPE 10 : Page Contact',() => {
+        cy.contact(jddCelib.cellPhoneNumber, jddCelib.adress, jddCelib.postalCode, jddCelib.city, jddCelib.countryZone)
         cy.get('[data-test=navigator-compact-forward]').click()
         cy.wait(8000)
         cy.url().should('include', '/offers')
