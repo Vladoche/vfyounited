@@ -1,3 +1,10 @@
+/*        
+  /\/\   __ _ _ __(_) ___  ___ 
+ /    \ / _` | '__| |/ _ \/ __|
+/ /\/\ \ (_| | |  | |  __/\__ \
+\/    \/\__,_|_|  |_|\___||___/
+                                 */
+
 describe('Parcours des mariés', () => {
     let jddMarie = require('../../fixtures/jddMarie')
     
@@ -45,7 +52,55 @@ describe('Parcours des mariés', () => {
         cy.get("h2").should('contain', 'Profession de votre conjoint')
     })
 
-    
+    it('ETAPE 6 : Renseignement de la profession du conjoint',() => {      
+        cy.activityPartner(jddMarie.partnerActivitySector, jddMarie.partnerProfession, jddMarie.partnerContractType, jddMarie.partnerEmployedFromMonth, jddMarie.partnerEmployedFromYear)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/incomes')
+        cy.get("h2").should('contain', 'Vos revenus mensuels')
+    })
+
+    it('ETAPE 7 : Renseignement des revenus mensuels',() => {                 
+        cy.revenusMensuelsMarie(jddMarie.mainIncome, jddMarie.coIncome, jddMarie.housingAssistance, jddMarie.additionalIncome)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/outcomes')
+        cy.get("h2").should('contain', 'Vos charges mensuelles')
+    })
+
+    it('ETAPE 8 : Renseignement des charges mensuelles',() => {                 
+        cy.chargesMensuellesMarie(jddMarie.mortgageAmount, jddMarie.loanCount)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/bank')
+        cy.get("h2").should('contain', 'Votre banque')
+    })
+
+    it('ETAPE 9 : Renseignement de la banque',() => {                 
+        cy.banque(jddMarie.bank, jddMarie.bankFromYear)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/identity')
+        cy.get("h2").should('contain', 'Vos informations')
+    })
+
+    it('ETAPE 10 : Détails identité',() => {                 
+        cy.identite(jddMarie.gender, jddMarie.lastName, jddMarie.firstName, jddMarie.dayBirth, jddMarie.monthBirth, jddMarie.yearBirth, jddMarie.postalCode, jddMarie.city)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/partneridentity')
+        cy.get("h2").should('contain', 'Les informations de votre conjoint')
+    })
+
+    it('ETAPE 11 : Détails identité du conjoint',() => {                 
+        cy.partnerIdentity(jddMarie.gender2, jddMarie.lastName2, jddMarie.maidenName, jddMarie.firstName2, jddMarie.dayBirth2, jddMarie.monthBirth2, jddMarie.yearBirth2, jddMarie.postalCode2, jddMarie.city2)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.url().should('include', '/contact')
+        cy.get("h2").should('contain', 'Vos coordonnées')
+    })
+
+    it('ETAPE 12 : Page Contact',() => {
+        cy.contact(jddMarie.cellPhoneNumber, jddMarie.adress, jddMarie.postalCode, jddMarie.city, jddMarie.countryZone)
+        cy.get('[data-test=navigator-compact-forward]').click()
+        cy.wait(3000)
+        cy.url().should('include', '/offers')
+        
+    })
 
     
     

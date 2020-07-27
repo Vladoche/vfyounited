@@ -1,33 +1,13 @@
 /* 
-______          _      _     _____                                   
-| ___ \        (_)    | |   /  __ \                                _ 
-| |_/ / __ ___  _  ___| |_  | /  \/_   _ _ __  _ __ ___  ___ ___  (_)
-|  __/ '__/ _ \| |/ _ \ __| | |   | | | | '_ \| '__/ _ \/ __/ __|    
-| |  | | | (_) | |  __/ |_  | \__/\ |_| | |_) | | |  __/\__ \__ \  _ 
-\_|  |_|  \___/| |\___|\__|  \____/\__, | .__/|_|  \___||___/___/ (_)
-              _/ |                  __/ | |                          
-             |__/                  |___/|_|                          
-__   __                _ _           _                               
-\ \ / /               (_) |         | |                              
- \ V /___  _   _ _ __  _| |_ ___  __| |                              
-  \ // _ \| | | | '_ \| | __/ _ \/ _` |                              
-  | | (_) | |_| | | | | | ||  __/ (_| |                              
-  \_/\___/ \__,_|_| |_|_|\__\___|\__,_|                              
-                                                                     
-                                                                     
- _____              _ _ _                                            
-/  __ \            | (_) |                                           
-| /  \/_ __ ___  __| |_| |_                                          
-| |   | '__/ _ \/ _` | | __|                                         
-| \__/\ | |  __/ (_| | | |_                                          
- \____/_|  \___|\__,_|_|\__|                                         
-                                                                     
-                                                                    
- *** BIENVENUE SUR MA PRESENTATION D'AUTOMATISATION DE TEST AVEC CYPRESS ***     */
+   ___     _ _ _           _        _               
+  / __\___| (_) |__   __ _| |_ __ _(_)_ __ ___  ___ 
+ / /  / _ \ | | '_ \ / _` | __/ _` | | '__/ _ \/ __|
+/ /__|  __/ | | |_) | (_| | || (_| | | | |  __/\__ \
+\____/\___|_|_|_.__/ \__,_|\__\__,_|_|_|  \___||___/
+                                                        */
 
 describe('Parcours du célibataire', () => {
     let jddCelib = require('../../fixtures/jddCelib')
-    
 
     before(() => {
         cy.visit('https://www.younited-credit.com/')
@@ -74,6 +54,8 @@ describe('Parcours du célibataire', () => {
         cy.url().should('include', '/incomes')
         cy.get("h2").should('contain', 'Vos revenus mensuels')
     })
+
+    
 //COMMANDE FAITE
     it('ETAPE 6 : Renseignement des revenus mensuels',() => {                 
         cy.revenusMensuels(jddCelib.mainIncome, jddCelib.housingAssistance, jddCelib.additionalIncome)
