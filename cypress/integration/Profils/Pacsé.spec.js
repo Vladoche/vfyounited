@@ -5,7 +5,7 @@
 \/    \__,_|\___|___/\___||___/
                                  */
 
-describe('Parcours des mariés', () => {
+describe('Parcours des pacsés', () => {
     let jddPacse = require('../../fixtures/jddPacse')
     
     before(() => {
